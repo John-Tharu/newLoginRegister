@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include("partials/nav") %>
+    <div class="container">
+        <div class="box">
+            <h1>Register User</h1>
+            <div class="bag">
+                <div class="pocket1">
+                    <img src="/assets/Sign up-bro.png" alt="logo">
+                </div>
+                <div class="pocket2">
+                    <form action="/register" method="post">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password">
+                        <label for="cpassword">Confirm Password</label>
+                        <input type="password" name="cpassword" id="cpassword">
+                        <div class="btn">
+                            <input type="submit" value="Register" name="Register">
+                        </div>
+                        <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
