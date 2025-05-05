@@ -1,11 +1,11 @@
 import { Router } from "express";
-import { about, contact, home, login, register, signup } from "../controller/controller.js";
+import { about, contact, home, login, logindata, register, signup } from "../controller/controller.js";
 
 const router = Router();
 
 router.get('/', home);
 
-router.get('/login', login);
+router.route('/login').get(login).post(logindata);
 
 router.get('/about', about);
 

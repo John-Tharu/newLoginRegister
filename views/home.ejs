@@ -8,6 +8,13 @@
 </head>
 <body>
     <%- include("partials/nav") %>
+    
+    <% if (user) { %>
+        <p>Welcome, <%= user.name %></p>
+      <% } else { %>
+        <p>Please log in.</p>
+      <% } %>
+
     <h1>I am home page</h1>
 </body>
 </html>
