@@ -72,3 +72,9 @@ export const logindata = async (req,res) =>{
         res.render('login');
     }
 }
+
+export const medata = (req,res) =>{
+    if(!req.user) return res.send('You are not loggedIn');
+
+    return res.send(`Hello ${req.user.name}. Your email is ${req.user.email}`);
+}
