@@ -5,6 +5,7 @@ export const login = (req,res) =>{
 }
 
 export const home = (req,res) =>{
+    if(!req.user) return res.redirect('login');
     res.render('home');
 }
 
@@ -13,10 +14,12 @@ export const register = (req,res) =>{
 }
 
 export const about = (req,res) =>{
+    if(!req.user) return res.redirect('login');
     res.render('about');
 }
 
 export const contact = (req,res) =>{
+    if(!req.user) return res.redirect('login');
     res.render('contact');
 }
 
@@ -43,6 +46,9 @@ export const signup = async (req,res) =>{
 }
 
 export const logindata = async (req,res) =>{
+
+    if(req.user) return res.redirect('/');
+
     //console.log(req.body);
     const {email,password} = req.body;
 
@@ -77,4 +83,9 @@ export const medata = (req,res) =>{
     if(!req.user) return res.send('You are not loggedIn');
 
     return res.send(`Hello ${req.user.name}. Your email is ${req.user.email}`);
+}
+
+export const logout = (req,res) =>{
+    res.clearCookie('access_token');
+    res.redirect('login');
 }
