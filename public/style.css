@@ -87,3 +87,21 @@ nav{
 .pocket2 input[type="submit"]:hover{
     background-color: #078053;
 }
+.error{
+    padding: 10px;
+    background-color: rgba(148, 0, 0, 0.144);
+    color: crimson;
+    margin-bottom: 20px;
+    border-left: 5px solid red;
+}
+footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    position: fixed;
+    bottom: 0;
+    height: 8vh;
+}

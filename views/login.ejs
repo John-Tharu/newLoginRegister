@@ -18,6 +18,13 @@
                         <input type="email" name="email" id="email">
                         <label for="password">Password</label>
                         <input type="password" name="password" id="password">
+                        
+                        <% if(msg && msg.length > 0){
+                            msg.forEach((error)=>{ %>
+                                <p class="error"><%= error  %></p>
+                           <% })
+                       } %>
+
                         <div class="btn">
                             <input type="submit" value="Register" name="Register">
                         </div>
@@ -30,5 +37,6 @@
             </div>
         </div>
     </div>
+    <%- include("partials/footer") %>
 </body>
 </html>

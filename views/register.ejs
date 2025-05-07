@@ -25,6 +25,13 @@
                         <input type="password" name="password" id="password">
                         <label for="cpassword">Confirm Password</label>
                         <input type="password" name="cpassword" id="cpassword">
+
+                       <% if(msg && msg.length > 0){
+                            msg.forEach((error)=>{ %>
+                                <p class="error"><%= error  %></p>
+                           <% })
+                       } %>
+
                         <div class="btn">
                             <input type="submit" value="Register" name="Register">
                         </div>
